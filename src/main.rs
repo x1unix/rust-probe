@@ -3,7 +3,7 @@ use std::error::Error;
 use std::process;
 
 fn die(msg: &str) {
-    println!("Error: {msg}");
+    eprintln!("Error: {msg}");
     process::exit(1);
 }
 
@@ -18,4 +18,3 @@ fn run() -> Result<(), Box<dyn Error>> {
     ugrep::run(&args)?;
     Ok(())
 }
-
