@@ -4,25 +4,18 @@ use super::args::Args;
 
 pub fn search_case_insensitive<'a>(needle: &str, haystack: &'a str) -> Vec<&'a str> {
     let query = needle.to_lowercase();
-    let mut results = Vec::with_capacity(32);
-    for line in haystack.lines() {
-        if line.to_lowercase().contains(&query) {
-            results.push(line);
-        }
-    }
 
-    results
+    haystack
+        .lines()
+        .filter(|line| line.to_lowercase().contains(&query))
+        .collect()
 }
 
 pub fn search<'a>(needle: &str, haystack: &'a str) -> Vec<&'a str> {
-    let mut results = Vec::with_capacity(32);
-    for line in haystack.lines() {
-        if line.contains(needle) {
-            results.push(line);
-        }
-    }
-
-    results
+    haystack
+        .lines()
+        .filter(|line| line.contains(needle))
+        .collect()
 }
 
 pub fn run(args: &Args) -> Result<(), Box<dyn Error>> {
