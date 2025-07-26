@@ -7,9 +7,10 @@ pub struct Args {
 }
 
 impl Args {
+    /// Parses Args from command line string.
+    ///
+    /// As option, reads `IGNORE_CASE` environment variable to run in case-insensitive mode.
     pub fn parse() -> Result<Self, &'static str> {
-        // TODO: refactor into TryFrom
-
         let case_insensitive = env::var("IGNORE_CASE")
             .map(|s| s.parse::<bool>().unwrap_or(false))
             .unwrap_or(false);

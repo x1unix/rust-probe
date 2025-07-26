@@ -1,3 +1,9 @@
+//! # µGrep
+//!
+//! micro-grep (or ugrep) is a poor-man's grep to practice Rust.
+//!
+//! Don't use this in prod.
+
 mod args;
 mod run;
 
