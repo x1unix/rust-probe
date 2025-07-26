@@ -7,9 +7,5 @@ name = "kata"
 version = "0.1.0"
 
 [[package]]
-name = "probe"
-version = "0.1.0"
-
-[[package]]
 name = "ugrep"
 version = "0.1.0"
