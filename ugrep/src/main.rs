@@ -1,6 +1,8 @@
-use probe::ugrep::{self, Args};
 use std::error::Error;
 use std::process;
+
+mod ugrep;
+use ugrep::Args;
 
 fn die(msg: &str) {
     eprintln!("Error: {msg}");
