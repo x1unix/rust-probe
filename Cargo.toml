@@ -1,3 +1,3 @@
 [workspace]
 resolver = "2"
-members = [ "kata","ugrep"]
+members = [ "kata", "probe","ugrep"]
