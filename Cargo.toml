@@ -1,3 +1,3 @@
 [workspace]
 resolver = "2"
-members = [ "kata", "probe","ugrep"]
+members = [ "async-probe", "kata", "probe","ugrep"]
